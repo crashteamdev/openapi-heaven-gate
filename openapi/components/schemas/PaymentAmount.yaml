@@ -1,0 +1,8 @@
+type: object
+properties:
+  value:
+    type: string
+    description: payment amount value
+  currency:
+    type: string
+    description: payment currency
