@@ -163,36 +163,6 @@
                                 </goals>
                                 <configuration>
                                     <inputSpec>web_deploy/openapi.yaml</inputSpec>
-                                    <generatorName>spring</generatorName>
-                                    <configOptions>
-                                        <dateLibrary>java8</dateLibrary>
-                                    </configOptions>
-                                    <apiPackage>${default.package}.api</apiPackage>
-                                    <modelPackage>${default.package}.model</modelPackage>
-                                    <skipValidateSpec>true</skipValidateSpec>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>server-kotlin</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.openapitools</groupId>
-                        <artifactId>openapi-generator-maven-plugin</artifactId>
-                        <version>${openapi.generator-version}</version>
-                        <executions>
-                            <execution>
-                                <id>spring-server</id>
-                                <goals>
-                                    <goal>generate</goal>
-                                </goals>
-                                <configuration>
-                                    <inputSpec>web_deploy/openapi.yaml</inputSpec>
                                     <generatorName>kotlin-spring</generatorName>
                                     <configOptions>
                                         <dateLibrary>java8</dateLibrary>
@@ -232,41 +202,6 @@
                                     </configOptions>
 
                                     <library>resttemplate</library>
-
-                                    <apiPackage>${default.package}.api</apiPackage>
-                                    <modelPackage>${default.package}.model</modelPackage>
-                                    <skipValidateSpec>true</skipValidateSpec>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>client-kotlin</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.openapitools</groupId>
-                        <artifactId>openapi-generator-maven-plugin</artifactId>
-                        <version>${openapi.generator-version}</version>
-                        <executions>
-                            <execution>
-                                <id>remote</id>
-                                <goals>
-                                    <goal>generate</goal>
-                                </goals>
-                                <configuration>
-                                    <inputSpec>web_deploy/openapi.yaml</inputSpec>
-
-                                    <generatorName>kotlin</generatorName>
-
-                                    <configOptions>
-                                        <dateLibrary>java8</dateLibrary>
-                                    </configOptions>
-
-                                    <library>jvm-ktor</library>
 
                                     <apiPackage>${default.package}.api</apiPackage>
                                     <modelPackage>${default.package}.model</modelPackage>
