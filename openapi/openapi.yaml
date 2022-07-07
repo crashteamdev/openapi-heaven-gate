@@ -9,7 +9,7 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-  - url: 'https://{subdomain}.dev.crashteam/ke/{version}'
+  - url: 'https://{subdomain}.marketdb.ru/{version}'
     variables:
       subdomain:
         default: api
