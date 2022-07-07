@@ -1,0 +1,13 @@
+content:
+  application/json:
+    schema:
+      properties:
+        amount:
+          $ref: ../schemas/PaymentAmount.yaml
+        description:
+          description: payment description
+          type: string
+        return_url:
+          description: where to redirect user after payment complition
+description: Payment resource.
+required: true

@@ -1,0 +1,16 @@
+type: object
+properties:
+  id:
+    type: string
+    description: payment id
+  status:
+    type: string
+    enum:
+      - pending
+      - success
+      - canceled
+  amount:
+    $ref: './PaymentAmount.yaml'
+  createdAt:
+    type: string
+    format: date-time

@@ -1,0 +1,23 @@
+get:
+  summary: Данные платежа
+  operationId: getPayment
+  tags:
+    - payment
+  parameters:
+    - $ref: '../components/parameters/requestId.yaml'
+    - $ref: '../components/parameters/paymentResourceId.yaml'
+  responses:
+    '200':
+      description: Получены данные платежа
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/AccountPayment.yaml
+    '400':
+      $ref: '../components/responses/BadRequest.yaml'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '403':
+      $ref: ../components/responses/Forbidden.yaml
+    '404':
+      description: Платеж не найден

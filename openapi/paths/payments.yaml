@@ -1,0 +1,56 @@
+get:
+  summary: Получение списка платежей пользователя
+  operationId: getPayments
+  tags:
+    - payment
+  parameters:
+    - $ref: '../components/parameters/requestId.yaml'
+  responses:
+    '200':
+      description: Получен список платежей пользователя
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              - $ref: '../components/schemas/AccountPayment.yaml'
+      headers:
+        Pagination-Total:
+          $ref: ../components/headers/Pagination-Total.yaml
+        Pagination-Limit:
+          $ref: ../components/headers/Pagination-Limit.yaml
+        Pagination-Offset:
+          $ref: ../components/headers/Pagination-Offset.yaml
+    '400':
+      $ref: '../components/responses/BadRequest.yaml'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '403':
+      $ref: ../components/responses/Forbidden.yaml
+    '404':
+      description: Платежи не найдены
+post:
+  summary: Создание платежа
+  operationId: createPayment
+  tags:
+    - payment
+  parameters:
+    - $ref: '../components/parameters/requestId.yaml'
+  description: |
+    Создание платежа.
+  requestBody:
+    $ref: ../components/requestBodies/CreatePayment.yaml
+  responses:
+    '201':
+      description: Платеж успешно создан.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/AccountPayment.yaml
+    '400':
+      $ref: '../components/responses/BadRequest.yaml'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '403':
+      $ref: ../components/responses/Forbidden.yaml
+

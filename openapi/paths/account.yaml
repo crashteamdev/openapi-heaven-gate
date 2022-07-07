@@ -1,0 +1,20 @@
+get:
+  summary:  Получить информацию об аккаунте
+  operationId: getAccount
+  tags:
+    - account
+  parameters:
+    - $ref: '../components/parameters/requestId.yaml'
+  responses:
+    '200':
+      description: Получена информация об аккаунте
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Account.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '403':
+      $ref: ../components/responses/Forbidden.yaml
+    '404':
+      description: Пользователь не найден
