@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              - $ref: '../components/schemas/AccountPayment.yaml'
+              $ref: '../components/schemas/AccountPayment.yaml'
       headers:
         Pagination-Total:
           $ref: ../components/headers/Pagination-Total.yaml

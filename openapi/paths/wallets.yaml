@@ -13,7 +13,7 @@ get:
           schema:
             type: array
             items:
-              - $ref: '../components/schemas/AccountWallet.yaml'
+              $ref: '../components/schemas/AccountWallet.yaml'
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '403':
