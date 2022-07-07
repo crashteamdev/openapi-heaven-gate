@@ -8,4 +8,9 @@ properties:
   subscription:
     type: array
     items:
-      - $ref: ./AccountProductSubscription.yaml
+      type: object
+      properties:
+        product:
+          $ref: ./Product.yaml
+        subscription:
+          $ref: ./Subscription.yaml
