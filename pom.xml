@@ -146,9 +146,16 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <sourceDirectory>${src.dir}</sourceDirectory>
+    </build>
+
     <profiles>
         <profile>
             <id>server</id>
+            <properties>
+                <src.dir>${project.basedir}/src/main/kotlin</src.dir>
+            </properties>
             <build>
                 <plugins>
                     <plugin>
@@ -180,6 +187,9 @@
         </profile>
         <profile>
             <id>client</id>
+            <properties>
+                <src.dir>${project.basedir}/src/main/java</src.dir>
+            </properties>
             <build>
                 <plugins>
                     <plugin>
