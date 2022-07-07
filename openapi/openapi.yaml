@@ -12,7 +12,7 @@ servers:
   - url: 'https://{subdomain}.marketdb.ru/{version}'
     variables:
       subdomain:
-        default: api
+        default: napi
       version:
         enum:
           - v1
