@@ -1,5 +1,6 @@
 type: object
 properties:
   amount:
-    type: string
-    description: wallet amount value
+    type: integer
+    format: int64
+    description: wallet amount value (minor units)
