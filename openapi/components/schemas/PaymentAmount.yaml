@@ -3,6 +3,6 @@ properties:
   value:
     type: string
     description: payment amount value
-  currency:
-    type: string
-    description: payment currency
+  currencyCode:
+    type: integer
+    description: payment currency code (ISO-4217 format)
