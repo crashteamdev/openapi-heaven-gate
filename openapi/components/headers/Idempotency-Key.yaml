@@ -1,0 +1,4 @@
+description: Idempotency key.
+schema:
+  type: string
+  format: uuid
