@@ -8,6 +8,5 @@ content:
           description: payment description
           type: string
         return_url:
+          type: string
           description: where to redirect user after payment complition
-description: Payment resource.
-required: true
