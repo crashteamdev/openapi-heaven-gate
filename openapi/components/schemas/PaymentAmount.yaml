@@ -5,5 +5,4 @@ properties:
     format: int64
     description: payment amount value (minor units)
   currencyCode:
-    type: integer
-    description: payment currency code (ISO-4217 format)
+    $ref: ./CurrencyCode.yaml
