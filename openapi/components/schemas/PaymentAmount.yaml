@@ -2,6 +2,7 @@ type: object
 properties:
   value:
     type: integer
+    format: int64
     description: payment amount value (minor units)
   currencyCode:
     type: integer
