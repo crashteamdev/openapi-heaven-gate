@@ -36,6 +36,7 @@ post:
     - payment
   parameters:
     - $ref: '../components/parameters/requestId.yaml'
+    - $ref: '../components/parameters/idempotencyKey.yaml'
   description: |
     Создание платежа.
   requestBody:
@@ -47,9 +48,6 @@ post:
         application/json:
           schema:
             $ref: ../components/schemas/AccountPayment.yaml
-      headers:
-        Idempotency-Key:
-          $ref: ../components/headers/Idempotency-Key.yaml
     '400':
       $ref: '../components/responses/BadRequest.yaml'
     '401':
