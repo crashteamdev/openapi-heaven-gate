@@ -4,7 +4,9 @@ get:
   tags:
     - payment
   parameters:
-    - $ref: '../components/parameters/requestId.yaml'
+    - $ref: ../components/parameters/requestId.yaml
+    - $ref: ../components/parameters/collectionLimit.yaml
+    - $ref: ../components/parameters/collectionOffset.yaml
   responses:
     '200':
       description: Получен список платежей пользователя
