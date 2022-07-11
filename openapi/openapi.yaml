@@ -28,6 +28,13 @@ paths:
     $ref: './paths/wallets.yaml'
   '/account':
     $ref: './paths/account.yaml'
+  '/account/subscription':
+    $ref: './paths/subscription@account.yaml'
+  '/subscriptions':
+    $ref: './paths/subscriptions.yaml'
+  '/subscriptions/{id}':
+    $ref: './paths/subscriptions@{id}.yaml'
+
 components:
   securitySchemes:
     bearer:

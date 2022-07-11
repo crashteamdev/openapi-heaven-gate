@@ -5,7 +5,13 @@ properties:
     format: uuid
   name:
     type: string
+  description:
+    type: string
   level:
     type: integer
+    description: level of subscription. From 1 to n where 1 is lowest level
+  price:
+    type: integer
+    format: int64
 
 

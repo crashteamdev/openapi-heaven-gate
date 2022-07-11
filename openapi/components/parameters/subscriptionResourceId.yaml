@@ -1,0 +1,8 @@
+name: id
+in: path
+required: true
+schema:
+  description: Идентификатор подписки
+  type: string
+  format: uuid
+  readOnly: true

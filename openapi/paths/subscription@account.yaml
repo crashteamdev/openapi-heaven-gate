@@ -1,0 +1,20 @@
+post:
+  summary: Добавить подписку пользователю
+  operationId: addAccountSubscription
+  tags:
+    - subscription
+  parameters:
+    - $ref: '../components/parameters/requestId.yaml'
+  description: |
+    Добавить подписку пользователю. Если такая подписка уже была у пользователя, но ее срок истек, тогда будет продлена на указанный период
+  requestBody:
+    $ref: ../components/requestBodies/AddAccountSubscription.yaml
+  responses:
+    '200':
+      description: Подписка успешно добавлена.
+    '400':
+      $ref: '../components/responses/BadRequest.yaml'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '403':
+      $ref: ../components/responses/Forbidden.yaml

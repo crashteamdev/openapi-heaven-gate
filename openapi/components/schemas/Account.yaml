@@ -13,7 +13,7 @@ properties:
         product:
           $ref: ./Product.yaml
         subscription:
-          $ref: ./Subscription.yaml
+          $ref: ./AccountSubscription.yaml
         validUntil:
           format: date-time
           type: string

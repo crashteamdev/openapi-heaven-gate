@@ -1,4 +1,4 @@
-description: Идентификатор пользователя
+description: Идентификатор платежа
 type: string
 format: uuid
 readOnly: true

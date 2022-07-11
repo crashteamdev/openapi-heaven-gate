@@ -1,0 +1,8 @@
+type: object
+properties:
+  product:
+    $ref: ./Product.yaml
+  subscription:
+    type: array
+    items:
+      $ref: ./Subscription.yaml

@@ -1,0 +1,14 @@
+content:
+  application/json:
+    schema:
+      properties:
+        productId:
+          description: subscription production id
+          type: string
+        subscriptionId:
+          description: subscription id
+          type: string
+        period:
+          type: integer
+          format: int32
+          description: How long is the subscription. 1 period = 30 days
