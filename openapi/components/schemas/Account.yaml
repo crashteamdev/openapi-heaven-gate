@@ -14,3 +14,6 @@ properties:
           $ref: ./Product.yaml
         subscription:
           $ref: ./Subscription.yaml
+        validUntil:
+          format: date-time
+          type: string
