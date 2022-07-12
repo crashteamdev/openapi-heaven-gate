@@ -5,15 +5,18 @@ properties:
   blocked:
     type: boolean
     default: false
-  subscription:
+  productSubscriptions:
     type: array
     items:
       type: object
       properties:
-        product:
-          $ref: ./Product.yaml
-        subscription:
-          $ref: ./AccountSubscription.yaml
+        productId:
+          $ref: ./ProductId.yaml
+        subscriptionId:
+          $ref: ./SubscriptionId.yaml
+        subscriptionLevel:
+          type: integer
+          format: int32
         validUntil:
           format: date-time
           type: string

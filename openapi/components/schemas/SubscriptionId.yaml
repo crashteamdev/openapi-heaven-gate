@@ -1,0 +1,4 @@
+description: Идентификатор подписки
+type: string
+format: uuid
+readOnly: true

@@ -1,5 +1,5 @@
 get:
-  summary: Список всех возможных подписок
+  summary: Список всех возможных продуктов и их подписок
   operationId: getSubscriptions
   tags:
     - subscription
@@ -7,7 +7,7 @@ get:
     - $ref: ../components/parameters/requestId.yaml
   responses:
     '200':
-      description: Получен список подписок
+      description: Получен список продуктов и подписок
       content:
         application/json:
           schema:
